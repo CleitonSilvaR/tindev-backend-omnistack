@@ -24,7 +24,7 @@ module.exports = {
     const userExists = await Dev.findOne({ user: username });
 
     if (userExists) {
-      return res.json({ userExists });
+      return res.json(userExists);
     }
 
     const url = `https://api.github.com/users/${username}`;
